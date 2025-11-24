@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A nurturing private school offering holistic education, strong values, and future-ready skills." />
+  <meta name="theme-color" content="#0c4a6e" />
+
+  <title>Sri Venkateswara A1 Matric Hr.sec School</title>
+
+  <!-- Fonts (system-first for performance) -->
+  <style>
+    :root{
+      --brand-900:#0c4a6e;
+      --brand-700:#075985;
+      --brand-500:#0ea5e9;
+      --brand-100:#e0f2fe;
+      --accent-600:#16a34a;
+      --accent-100:#dcfce7;
+      --text-900:#0f172a;
+      --text-700:#334155;
+      --text-500:#64748b;
+      --bg-50:#f8fafc;
+      --card:#ffffff;
+      --muted:#e2e8f0;
+      --warn:#f59e0b;
+      --shadow: 0 10px 30px rgba(2, 6, 23, .08);
+      --radius:16px;
+      --radius-sm:10px;
+      --maxw:1200px;
+    }
+    /* Base */
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      color:var(--text-900);
+      background:linear-gradient(180deg, var(--bg-50), #fff);
+    }
+    a{color:var(--brand-700);text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--muted);
+      backdrop-filter:saturate(1.2) blur(6px);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      padding:14px 20px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;
+    }
+    .brand-logo{
+      width:40px;height:40px;border-radius:50%;overflow:hidden;flex:0 0 40px;
+      background: radial-gradient(circle at 30% 30%, var(--brand-500), var(--brand-900));
+      box-shadow:0 6px 14px rgba(14,165,233,.25);
+    }
+    .brand-logo img{width:100%;height:100%;object-fit:cover;display:block}
+    nav ul{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
+    nav a{
+      padding:10px 14px;border-radius:10px;color:var(--text-700);font-weight:600;
+    }
+    nav a:hover, nav a:focus{
+      background:var(--brand-100);outline:none;color:var(--brand-900)
+    }
+    .cta{
+      display:flex;gap:10px;align-items:center;flex-wrap:wrap
+    }
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 14px;border-radius:10px;border:1px solid var(--muted);
+      color:var(--text-700);background:#fff;font-weight:700;cursor:pointer;
+      box-shadow:0 2px 6px rgba(2, 6, 23, .06);
+    }
+    .btn-primary{
+      background:linear-gradient(135deg, var(--brand-700), var(--brand-500));
+      color:#fff;border:none
+    }
+    .btn-primary:hover{filter:brightness(1.05)}
+    .btn-outline:hover{background:#fff;color:var(--brand-700);border-color:var(--brand-500)}
+
+    /* Prospectus request styling: blue request card and blue request button */
+    #prospectus .card{
+      background:linear-gradient(180deg, #e6f7ff, #ffffff);
+      border-color:rgba(14,165,233,.12);
+    }
+    #prospectusRequest{
+      background:linear-gradient(135deg, var(--brand-700), var(--brand-500));
+      color:#fff;border:none;box-shadow:0 6px 18px rgba(14,165,233,.12);
+    }
+    #prospectusRequest:hover{filter:brightness(1.03)}
+
+    /* Hero */
+    .hero{
+      position:relative;overflow:hidden
+    }
+    .hero-wrap{
+      display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;
+      padding:60px 0
+    }
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--accent-100);color:#065f46;border:1px solid #86efac;
+      padding:8px 12px;border-radius:999px;font-weight:700
+    }
+    .hero h1{
+      font-size:clamp(28px, 4.8vw, 52px);
+      line-height:1.08;margin:16px 0 8px
+    }
+    .hero p{color:var(--text-700);font-size:clamp(16px, 2.2vw, 20px)}
+    .hero-card{
+      background:linear-gradient(165deg, #fff, var(--brand-100));
+      border:1px solid var(--muted);border-radius:var(--radius);padding:18px;
+      box-shadow:var(--shadow)
+    }
+    .hero-stats{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px
+    }
+    .stat{background:#fff;border:1px solid var(--muted);border-radius:12px;padding:14px;text-align:center}
+    .stat b{font-size:22px;color:var(--brand-900)}
+    .hero-img{
+      aspect-ratio:4/3;border-radius:var(--radius);
+      background:
+        radial-gradient(120% 100% at 0% 0%, var(--brand-100), transparent 70%),
+        linear-gradient(145deg, #fff, #f1f5f9);
+      border:1px solid var(--muted);box-shadow:var(--shadow);
+      display:grid;place-items:center;color:var(--text-500);text-align:center;padding:20px
+    }
+
+    /* Section */
+    section{
+      padding:56px 0;border-top:1px solid #eef2f7
+    }
+    .section-head{
+      display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:24px
+    }
+    .section-head h2{margin:0;font-size:clamp(22px,3.6vw,34px)}
+    .section-head p{margin:8px 0 0;color:var(--text-700)}
+
+    /* Cards + grids */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .card{
+      background:var(--card);border:1px solid var(--muted);border-radius:var(--radius-sm);
+      padding:18px;box-shadow:var(--shadow)
+    }
+    .card h3{margin:0 0 8px}
+    .pill{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:6px 10px;border:1px dashed var(--muted);border-radius:999px;color:var(--text-700)
+    }
+    /* Faculty photos */
+    .faculty-photo{border-radius:12px;overflow:hidden;margin-bottom:12px;border:1px solid var(--muted)}
+    .faculty-photo img{width:100%;height:160px;object-fit:cover;display:block}
+
+    /* Timeline / events */
+    .timeline{position:relative;padding-left:18px;border-left:3px solid var(--brand-100)}
+    .timeline .item{margin:14px 0;padding-left:6px}
+    .timeline .item h4{margin:0;color:var(--brand-900)}
+    .timeline .item small{color:var(--text-500)}
+
+    /* Gallery */
+    .gallery{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:10px
+    }
+    .gallery .ph{
+      aspect-ratio:1; border-radius:12px; border:1px solid var(--muted);
+      background:linear-gradient(135deg,#f8fafc,#eef2ff);display:grid;place-items:center;
+      color:var(--text-500);font-weight:700
+    }
+    .gallery .ph img{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block}
+
+    /* Testimonials */
+    .quote{
+      display:flex;gap:14px
+    }
+    .quote .avatar{
+      width:56px;height:56px;border-radius:50%;
+      background:linear-gradient(135deg,#93c5fd,#60a5fa);border:2px solid #fff;box-shadow:var(--shadow)
+    }
+    .quote blockquote{margin:0;color:var(--text-700)}
+    .stars{color:#f59e0b}
+
+    /* Fees table */
+    table{width:100%;border-collapse:collapse}
+    th, td{padding:12px;border:1px solid var(--muted);text-align:left}
+    th{background:#f1f5f9}
+
+    /* Contact form */
+    .form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .form-grid .full{grid-column:1/-1}
+    label{display:block;font-weight:700;margin-bottom:6px}
+    input, select, textarea{
+      width:100%;padding:10px 12px;border:1px solid var(--muted);border-radius:10px;
+      font:inherit
+    }
+    textarea{min-height:120px;resize:vertical}
+    .note{color:var(--text-500);font-size:14px}
+
+    /* Footer */
+    footer{
+      background:#0b1324;color:#d1d5db;margin-top:40px;border-top:4px solid var(--brand-700)
+    }
+    footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;padding:28px 0}
+    footer a{color:#cfeafe}
+    .copyright{
+      border-top:1px solid #1f2937;padding:16px;color:#94a3b8;font-size:14px
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px){
+      .hero-wrap{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(3,1fr)}
+      footer .cols{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      nav ul{display:none}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .hero{padding-top:0}
+      .form-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header aria-label="Main header">
+    <div class="nav container" role="navigation">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="false">
+          <img src="logo.png" width="200px" alt="EverBright logo">
+        </div>
+     
+        <div>
+            
+          <div>Sri Venkateswara A1 Matric Hr.school </div>
+          <small style="color:var(--text-500)">Ranked No.1 in Attur Educational District</small>
+        </div>
+      </div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#academics">Academics</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#faculty">Faculty</a></li>
+          <li><a href="#facilities">Facilities</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cta">
+        <a class="btn btn-primary" href="#apply">Apply now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home" aria-label="Hero">
+    <div class="container hero-wrap">
+      <div>
+        <span class="badge" aria-label="School accreditation badge">Education • Sports • Art & crafts</span>
+        <h1>Sri Venkateswara A1 Matric Hr.Sec School</h1>
+        <h3>Creativity is giving Yourself Permission to see thing Different...</h3>
+        <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#admissions">Start admissions</a>
+        </div>
+
+        <div class="hero-card" aria-label="Highlights">
+          <div class="pill">Holistic education • Best Results• Bus Availability</div>
+          <div class="hero-stats">
+            <div class="stat"><b>100%</b><div>Board results.</div></div>
+            <div class="stat"><b>50+</b><div>Teachers.</div></div>
+            <div class="stat"><b>2000+</b><div>Students.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="School" role="img" aria-label="Students collaborating in a bright classroom">
+        <img src="school1.png" alt="Students collaborating in a bright classroom" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" aria-label="About">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>About our school</h2>
+          <h4> Sri Venkateswara A1 Matric Hr.School Was Started @ 2007 </h4>
+        </div>
+        <div class="pill">SVS: STUDY • SERVICE • VICTORY</div>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h2>Mission</h2>
+          <h4>"Empowering minds to paint the world with creativity."</h4>
+        </div>
+        <div class="card">
+          <h2>Vision</h2>
+          <h4>What You think,you become,what you feel,you attract,what you image,you create.</h4>
+        </div>
+        <div class="card">
+          <h2>Benifites</h2>
+          <ul>
+            <li><h4>Value Education + Value Fees.</h4></li>
+            <li><h4>Well Experienced Teachers + Decipline.</h4></li>
+            <li><h4>CBSE Education in Matriculation Fees</h4></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academics -->
+  <section id="academics" aria-label="Academics">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Academics and programs</h2>
+          <h4>------Very Strong Academics and Experianced Teachers.</h4>
+        </div>
+        <div class="pill"></div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Primary (Grades 1–5)</h3>
+          <h4>Neet and Clean Classrooms with Huge Playground for Physical Workout.</h4>
+          <ul>
+            <li><h4>Reading Practice.</h4></li>
+            <li><h4>Abacus.</h4></li>
+            <li><h4>Extracurricular Activities.</h4></li>
+            <li><h4>yoga,painting,dance,carrom,chess etc..</h4></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Middle (Grades 6–8)</h3>
+          <h4>Skill development,Strong Foundation and interdeciplinary humanities.</h4>
+          <ul>
+            <li><h4>AI and Robotics.</h4></li>
+            <li><h4>Spoken English.</h4></li>
+            <li><h4>Physical Activities.</h4></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Senior (Grades 9–12)</h3>
+          <h4>Advanced courses, career guidance, competitive exam prep, and capstone research.</h4>
+          <ul>
+            <li>Focus on Marks.</li>
+            <li>Design & entrepreneurship.</li>
+            <li>Community internship.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <h2>Features:</h2>
+        <h4>Robotics, Smart Class, sports, natural Enviroment, Arts, Skills Devolopments Like " Karate,Skating,Silambam,Dance,Chess,Archiry,Carrom." Filtered RO Water in Whole Campus.</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admissions -->
+  <section id="admissions" aria-label="Admissions">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Admissions</h2>
+          <h4>Applications open year-round based on seat availability.</h4>
+        </div>
+        <div class="pill">Intake:__KG • 1  to 11</div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>How to Apply</h3>
+          <ol>
+            <li>Submit Online Application.</li>
+            <li>Upload Documents.</li>
+            <li>Attend interaction/assessment</li>
+            <li>Receive offer & enroll</li>
+          </ol>
+          <a class="btn btn-primary" id="apply" href="#contact">Apply now</a>
+        </div>
+        <div class="card">
+          <h3>Eligibility and documents</h3>
+          <ul>
+            <li>Birth certificate, address proof</li>
+            <li>Academic records (for Grade 2+)</li>
+            <li>Transfer certificate (for inter-school)</li>
+          </ul>
+          <h4 class="note">Scholarships available for merit and need-based candidates.</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Faculty -->
+  <section id="faculty" aria-label="Faculty">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Our faculty</h2>
+          <h3>Experienced educators, mentors, and advisors committed to student growth and wellbeing.</h3>
+        </div>
+        <div class="pill"> Teachers Avg. experience: 10+ years</div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="faculty-photo"><img src="prin sir.png" alt="Head of Higher"></div>
+          <h3>Higher.Sec Principal</h3>
+          <p>Head of Higher Secondary.</p>
+        </div>
+        <div class="card">
+          <div class="faculty-photo"><img src="prin mam.png" alt="STEM Coordinator"></div>
+          <h3>Primary Principal</h3>
+          <p>Head of Primary</p>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities -->
+  <section id="facilities" aria-label="Facilities">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Campus and facilities</h2>
+          <h4>Modern classrooms, Science labs,Commputer labs, library, sports , Experianced Teachers.</h4>
+        </div>
+        <div class="pill">Safety-first • Secure campus</div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card"><h3>Teachers</h3>50+ Teachers in Our School campus<h4></h4></div>
+        <div class="card"><h3>Library</h3><p>1000+ Books, Every Day Reading Practice.</p></div>
+        <div class="card"><h3>Sports</h3><p>Indoor courts, football field, track, yoga.</p></div>
+        <div class="card"><h3>Hostal</h3><p>Neet and Clean Hostal Facility.</p></div>
+        <div class="card"><h3>Campus Enviroment</h3><p>Very Silent and Greenary nature.</p></div>
+        <div class="card"><h3>Transport</h3><p>GPS-enabled school buses with Speed Limits For Students Safty.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" aria-label="Gallery">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Gallery</h2>
+          <p>Photos Of School.</p>
+        </div>
+        <div class="pill">Annual Day • Sports Meet • Science Fair</div>
+      </div>
+
+      <div class="gallery" aria-live="polite">
+        <div class="ph"><img src="budhar.png" alt="Classroom"></div>
+        <div class="ph"><img src="event.png" width="100px"Labs"></div>
+        <div class="ph"><img src="ACt.jpg" alt="Library"></div>
+        <div class="ph"><img src="att.png" alt="Sports"></div>
+        <div class="ph"><img src="svs fam.png" alt="Arts"></div>
+        <div class="ph"><img src="mat.jpg" alt="Events"></div>
+        <div class="ph"><img src="yo.jpg" alt="Service"></div>
+        <div class="ph"><img src="bus.png" alt="Campus"></div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- form -->
+  <section id="prospectus" aria-label="Prospectus">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Admision Form </h2>
+          <p>Download a detailed overview of programs, calendar, and policies.</p>
+        </div>
+        <div class="pill">PDF • 12 pages</div>
+      </div>
+      <div class="card">
+        <p>Admision Form is available for immediate download. If it's not available, you can request it below.</p>
+        <a id="prospectusDownload" class="btn btn-primary" href="" download style="display:none">Download prospectus</a>
+        <a id="prospectusRequest" class="btn" href="#contact">Request Form</a>
+        <p id="prospectusNote" class="note" style="margin-top:8px"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" aria-label="Contact">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Contact and visit</h2>
+          <p></p>
+        </div>
+        <div class="pill">Mon–Sat • 9:00 AM–5:00 PM</div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Write to us</h3>
+          <form id="contactForm" novalidate>
+            <div class="form-grid">
+              <div>
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="+91 9XXXXXXXXX" />
+              </div>
+              <div>
+                <label for="program">Program</label>
+                <select id="program" name="program">
+                  <option>Primary (1–5)</option>
+                  <option>Middle (6–8)</option>
+                  <option>Senior (9–12)</option>
+                </select>
+              </div>
+              <div class="full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your child or your query"></textarea>
+              </div>
+            </div>
+            <div style="margin-top:12px;display:flex;gap:10px">
+              <button class="btn btn-primary" type="submit">Send inquiry</button>
+              <button class="btn" type="reset">Reset</button>
+            </div>
+            <p id="formNote" class="note" role="status" aria-live="polite" style="margin-top:10px"></p>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>Visit us</h3>
+          <h4>Sri Venkateswara A1 Matric Hr.sec School Nathakkarai, Thalaivasal,Salem-636112.</h4>
+          <h4> Management Phone:93615 75 222 
+              Hr.Principal :93615 45 222||
+              Primary Principla: 9361525222
+              • Email: Venkateswarahs@gmail.com</h4>
+          <div class="school" aria-label="Map placeholder">
+            <img src="school2.png" alt="Map showing the location of Sri Venkateswara A1 Matric Hr.School" />
+  
+          </div>
+          <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="container cols">
+      <div>
+        <h3 style="color:#fff;margin-top:0">Sri Venkateswara A1 Matric Hr.School.</h3>
+        <p>An inclusive, future-ready school that balances excellence with empathy. We believe education should unlock purpose.</p>
+        <div class="pill" style="border-color:#334155;color:#cbd5e1"></div>
+      </div>
+      <div>
+        <h4 style="color:#cfeafe;margin-top:0">Quick links</h4>
+        <ul>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#fees">Fees</a></li>
+          <li><a href="#academics">Academics</a></li>
+          <li><a href="#faculty">Faculty</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#cfeafe;margin-top:0">Connect</h4>
+        <ul>
+          <li><a href="#contact">Contact us</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container" style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
+        <div>© <span id="year"></span> Sri Venkateswara School. All rights reserved.</div>
+        <div>Privacy • Terms • Non-discrimination policy</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Minimal JS: year + simple form feedback -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const form = document.getElementById('contactForm');
+    const note = document.getElementById('formNote');
+
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      const name = fd.get('name')?.toString().trim();
+      const email = fd.get('email')?.toString().trim();
+      if(!name || !email){
+        note.textContent = 'Please fill in your name and a valid email.';
+        note.style.color = '#dc2626';
+        return;
+      }
+      note.textContent = 'Thanks! Your inquiry has been recorded. We will contact you soon.';
+      note.style.color = '#065f46';
+      form.reset();
+    });
+
+    // Check if prospectus PDF exists on the server and toggle UI
+    (async function(){
+      const dl = document.getElementById('prospectusDownload');
+      const req = document.getElementById('prospectusRequest');
+      const pn = document.getElementById('prospectusNote');
+      if(!dl || !req || !pn) return;
+      try{
+        const res = await fetch('files/prospectus.pdf', { method: 'HEAD' });
+        if(res.ok){
+          dl.style.display = 'inline-flex';
+          req.style.display = 'none';
+          pn.textContent = 'Prospectus ready — click download.';
+          pn.style.color = '#065f46';
+        } else {
+          dl.style.display = 'none';
+          req.style.display = 'inline-flex';
+          pn.textContent = 'Prospectus currently not available for direct download.';
+          pn.style.color = '#64748b';
+        }
+      }catch(err){
+        dl.style.display = 'none';
+        req.style.display = 'inline-flex';
+        pn.textContent = 'Unable to check prospectus availability (offline).';
+        pn.style.color = '#64748b';
+      }
+    })();
+  </script>
+</body>
+</html>
